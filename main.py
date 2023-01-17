@@ -1,8 +1,10 @@
 import requests
 
+def send_get_request(url):
+    return requests.get(url)
+
 def get_ip():
-    res = requests.get("https://checkip.amazonaws.com")
-    # shows your current public IP address
+    res = send_get_request("https://checkip.amazonaws.com")
     print(f"my ip is {res.text}")
 
 if __name__ == "__main__":
